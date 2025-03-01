@@ -21,6 +21,8 @@ func New() *Config {
 	cfg.data["db.MaxIdleConns"] = def("DB_MAX_IDLE_COMM", "10")
 	cfg.data["db.MaxOpenConns"] = def("DB_MAX_OPEN_COMM", "100")
 	cfg.data["db.ConnMaxLifetime"] = def("DB_CONN_MAX_LIFE_TIME", "3600")
+
+	cfg.data["kafka.addr"] = def("KAFKA_ADDR", "localhost:9092")
 	return cfg
 }
 func (c *Config) Get(name string) string {
